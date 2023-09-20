@@ -1,0 +1,15 @@
+<svg width="128" height="128" xmlns="http://www.w3.org/2000/svg">
+  <path d="
+    M 16,0                  <!-- Move to the starting point (top-left corner) -->
+    h 96                     <!-- Draw a horizontal line to the top-right corner -->
+    a 31,31 0 0 1 16,16       <!-- Draw a rounded corner (top-right) -->
+    v 96                     <!-- Draw a vertical line to the bottom-right corner -->
+    a 23,23 0 0 1 -16,16      <!-- Draw a rounded corner (bottom-right) -->
+    h -96                    <!-- Draw a horizontal line to the bottom-left corner -->
+    a 16,16 0 0 1 -16,-16     <!-- Draw a rounded corner (bottom-left) -->
+    v -96                    <!-- Draw a vertical line to the top-left corner -->
+    a 23,23 0 0 1 16,-16      <!-- Draw a rounded corner (top-left) -->
+    Z"                        <!-- Close the path -->
+    fill="black" stroke="black" stroke-width="2"
+  />
+</svg>

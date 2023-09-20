@@ -1,0 +1,26 @@
+<svg width="960" height="768" viewBox="0 0 960 768" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <mask id="maks" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="46" width="768" height="675">
+    <path d="M768 720.875V657.875L384 527.375L768 336.125V46.625L193.5 238.625L335.25 625.625L768 720.875Z" fill="white"/>
+    <path d="M334.5 213.125V330.125L0 301.625V240.875L334.5 213.125Z" fill="white"/>
+    <path d="M334.5 342.125V438.125L0 480.125V384.125L334.5 342.125Z" fill="white"/>
+  </mask>
+  <svg x="64" y="16">
+    <g id="b" mask="url(#maks)">
+      <rect y="24" width="768" height="707" fill="rgba(255, 0, 0, 0.66)"/>
+    </g>
+  </svg>
+  <svg x="128" y="-16">
+    <g id="b" mask="url(#maks)">
+      <rect y="24" width="768" height="707" fill="rgba(0, 191, 255, 0.5)"/>
+    </g>
+  </svg>
+  <svg x="96" y="0">
+    <g id="a" mask="url(#maks)">
+      <rect y="24" width="768" height="707" fill="#fbb337"/>
+      <path
+        d="M546.75 24.125H768V513.125H668.25L546.75 24.125Z"
+        fill="#b64c25"
+      />
+    </g>
+  </svg>
+</svg>

@@ -1,0 +1,3 @@
+[submodule "src/slate-react-components"]
+	path = src/slate-react-components
+	url = git@github.com:jsepia/slate-react-components.git

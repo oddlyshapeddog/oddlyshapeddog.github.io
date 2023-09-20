@@ -1,0 +1,107 @@
+.logoContainer {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  width: auto;
+  font-size: 1rem;
+  padding-top: 6.25%;
+  padding-bottom: 6.25%;
+  margin: 0 auto;
+  
+  /* filter: blur(1px); */
+}
+
+/* shadow */
+.logoContainer::before {
+  position: absolute;
+  margin-top: -5.333em;
+  content: ' ';
+  width: 16em;
+  height: 16em;
+  background: url('../bgs/osd_shadow_lowres.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  z-index: -1;
+  opacity: .88;
+}
+
+.logo + * {
+  margin-left: 0.25em;
+}
+
+.logo {
+  width: 5em;
+  transform: rotate(2deg);
+}
+
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.66em;
+
+  text-shadow: -.0625em 0 0 rgba(255, 0, 0, 0.66), .0625em 0 0 rgba(0, 191, 255, 0.5);
+  /* filter: blur(1px); */
+}
+
+.wordmark,
+a.wordmark,
+a.wordmark:link,
+a.wordmark:hover,
+a.wordmark:active,
+a.wordmark:visited {
+  color: var(--harvest-gold-bright);
+}
+
+.wordmark > .wordmarkText {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--heading-font-family);
+  text-transform: lowercase;
+  line-height: 0.88;
+}
+
+.wordmark > .wordmarkText > span:first-child {
+  margin-left: -0.25em;
+  margin-bottom: -0.25em;
+  transform: rotate(-7deg);
+  transform-origin: bottom left;
+}
+
+.wordmark > .wordmarkText > span:last-child {
+  margin-left: 0.25em;
+  transform: rotate(2deg);
+  transform-origin: top left;
+}
+
+.subtitle {
+  position: absolute;
+  color: var(--white);
+  left: auto;
+  right: auto;
+  bottom: 1.5em;
+  text-shadow: 0 0 .2em var(--fire-brick-strong), 0 0 .2em var(--fire-brick-strong), 0 -.1em 0 var(--fire-brick-strong);
+
+  font-family: var(--secondary-heading-font-family);
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: -0.066em;
+
+  transform: rotate3d(15deg 0 0);
+
+  /* color: var(--sky-blue-strong); */
+}
+
+@media screen and (min-width: 480px) {
+  .logoContainer {
+    font-size: 1.25em;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .logoContainer {
+    font-size: 1.5em;
+  }
+}

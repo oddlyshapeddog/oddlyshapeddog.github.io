@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=http://ai.mothcloud.io:7860/
+HostUrl=http://ai.mothcloud.io:7860/file=/ai_software/stable-diffusion-webui/outputs/extras-images/00004.png

@@ -1,0 +1,6 @@
+.sketchyThumbnail {
+  display: inline-flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  clip-path: var(--rounded-edges-clip-path-01);
+}

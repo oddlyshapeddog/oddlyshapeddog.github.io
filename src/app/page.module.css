@@ -1,0 +1,161 @@
+.pageMain {
+  --heading-font-family: Marhey, sans-serif;
+  --secondary-heading-font-family: Biorhyme, Rockwell, 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', serif;
+  --body-font-family: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+
+  --white: #fff;
+  --off-white: #f5f0f5;
+  --buff: hsla(26, 53%, 62%, 1);
+  --sky-blue: hsla(191, 40%, 63%, 1);
+  --sky-blue-strong: hsla(191, 80%, 66%, 1);
+  --air-force-blue: hsla(197, 29%, 47%, 1);
+  --charcoal: hsla(221, 20%, 28%, 1);
+  --charcoal-strong: hsla(221, 30%, 21%, 1);
+  --fire-brick: hsla(6, 58%, 38%, 1);
+  --fire-brick-strong: hsla(6, 65%, 30%, 1);
+  --dark-goldenrod: hsla(45, 58%, 23%, 1);
+  --dark-goldenrod-strong: hsla(50, 70%, 12%, 1);
+  --chamoisee: hsla(27, 29%, 53%, 1);
+  --coyote: hsla(30, 28%, 38%, 1);
+  --harvest-gold: hsla(38, 60%, 49%, 1);
+  --harvest-gold-bright: hsla(38, 92%, 65%, 1);
+  --harvest-gold-brightest: hsla(38, 99%, 80%, 1);
+  --fern-green: hsla(132, 33%, 36%, 1);
+  --fern-green-strong: hsla(132, 45%, 20%, 1);
+
+  --shadow-color-rgb: 34, 19, 22;
+
+  --primary-bg-color: var(--charcoal);
+  --primary-bg-color-strong: var(--charcoal-strong);
+  --primary-fg-color: var(--off-white);
+  --primary-fg-color-strong: var(--white);
+  --primary-accent-color: var(--harvest-gold-bright);
+  --primary-accent-color-strong: var(--harvest-gold-brightest);
+  --primary-border-color: var(--dark-goldenrod);
+  --primary-shadow-opacity: 0.4;
+  --primary-shadow-color: rgba(var(--shadow-color-rgb), var(--primary-shadow-opacity));
+  --secondary-bg-color: var(--fire-brick);
+  --secondary-bg-color-strong: var(--fire-brick-strong);
+  --secondary-fg-color: var(--off-white);
+  --secondary-fg-color-strong: var(--white);
+  --secondary-accent-color: var(--harvest-gold-bright);
+  --secondary-accent-color-strong: var(--harvest-gold-brightest);
+  --secondary-border-color: rgb(var(--nord2));
+  --secondary-shadow-opacity: 0.4;
+  --secondary-shadow-color: rgba(var(--shadow-color-rgb), var(--primary-shadow-opacity));
+  --tertiary-bg-color: var(--dark-goldenrod);
+  --tertiary-bg-color-strong: var(--dark-goldenrod-strong);
+  --tertiary-bg-color: var(--fern-green);
+  --tertiary-bg-color-strong: var(--fern-green-strong);
+  --tertiary-accent-color: var(--harvest-gold-bright);
+  --tertiary-accent-color-strong: var(--harvest-gold-brightest);
+  --tertiary-accent-color: rgb(var(--nord8));
+  --tertiary-accent-color-strong: rgb(var(--nord7));
+  --tertiary-border-color: rgb(var(--nord3));
+  --tertiary-shadow-opacity: 0.4;
+  --tertiary-shadow-color: rgba(var(--shadow-color-rgb), var(--primary-shadow-opacity));
+  --inverted-bg-color: var(--off-white);
+  --inverted-bg-color-strong: var(--white);
+  --inverted-fg-color: var(--charcoal);
+  --inverted-fg-color-strong: var(--charcoal-strong);
+  --inverted-accent-color: var(--fire-brick);
+  --inverted-accent-color-strong: var(--fire-brick-strong);
+  --inverted-border-color: rgb(var(--nord3));
+  --inverted-shadow-opacity: 0.4;
+  --inverted-shadow-color: rgba(var(--shadow-color-rgb), var(--primary-shadow-opacity));
+
+  max-width: 1920px;
+  min-height: 100vh;
+
+  background-image: url('./bgs/osd_bg_repeatable.jpg');
+  background-repeat: repeat-y;
+  background-size: 100% 100%;
+
+  z-index: 0;
+}
+
+.pageMainInner > * {
+  position: relative;
+  z-index: 0;
+}
+
+.header::before {
+  box-shadow: 0 .125rem .25rem var(--shadow-color);
+  transform: rotate(-1deg);
+}
+
+.pageMain h2,
+.pageMain .sectionBody {
+  position: relative;
+}
+
+.pageMain h2::before,
+.pageMain h2::after,
+.pageMain .sectionBody::before,
+.pageMain .sectionBody::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.pageMain h2::before,
+.pageMain .sectionBody::before {
+  clip-path: url('./../svg/heading-bg.svg#lozangulus');
+  z-index: -1;
+}
+
+.pageMain h2::after,
+.pageMain .sectionBody::after {
+  transform: translate(.2em, .1em);
+  left: 0;
+  background-color: var(--shadow-color);
+  clip-path: url('./../svg/heading-bg.svg#lozangulus');
+  z-index: -2;
+}
+
+.pageMain h2 {
+  display: flex;
+  width: auto;
+  width: fit-content;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  padding: var(--spc) calc(2 * var(--spc-double)) 0;
+  text-shadow: .1em .1em 0 var(--shadow-color);
+  z-index: 0;
+}
+
+.pageMain h2::before {
+  background-color: var(--bg-color-strong);
+  background-color: var(--bg-color);
+}
+
+.pageMain .sectionBody {
+  padding: calc(4.5 * var(--spc)) calc(3 * var(--spc-double));
+  min-height: 10em;
+
+  text-shadow: .1em .1em 0 var(--shadow-color);
+}
+
+.pageMain .sectionBody::before {
+  background-color: var(--bg-color);
+  background-color: var(--bg-color-strong);
+}
+
+.pageMain header + .sectionBody {
+  padding-top: calc(7.5 * var(--spc));
+  margin-top: -2em;
+}
+
+.pageMain h3 {
+  font-family: var(--secondary-heading-font-family);
+  text-transform: uppercase;
+  font-size: var(--font-size-2);
+}
+
+.footer {
+  font-weight: bold;
+}
