@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && rm -rf docs && mv out docs",
     "start": "next start",
-    "serve-static": "node server.js",
+    "serve-docs": "node server.js",
     "lint": "next lint"
   },
   "dependencies": {

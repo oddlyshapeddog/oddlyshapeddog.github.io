@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
   }
 
   // Construct the file path and sanitize it to prevent directory traversal attacks
-  filePath = path.join(__dirname, 'out', filePath);
+  filePath = path.join(__dirname, 'docs', filePath);
 
   // Check if the requested file exists
   fs.access(filePath, fs.constants.F_OK, (err) => {
