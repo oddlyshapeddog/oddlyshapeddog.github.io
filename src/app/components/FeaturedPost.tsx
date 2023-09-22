@@ -58,6 +58,7 @@ export default function FeaturedPost({
             </div>
           ) : null
         }
+
       </SlateBlock>
       <SlateBlock
         className={styles.body}

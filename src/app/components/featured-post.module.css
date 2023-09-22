@@ -24,10 +24,8 @@
 
 .iconContainer {
   grid-area: icon;
-  max-width: 4rem;
-}
+  max-width: 6rem;
   
-.iconContainer {
   position: absolute;
   bottom: calc(-1 * var(--content-spacing-v));
   left: var(--content-spacing-h);
@@ -37,6 +35,40 @@
   grid-area: body;
 }
 
+.iconContainer > img {
+  position: relative;
+  z-index: 2;
+}
+
+.iconContainer > img,
+.iconContainer::before {
+  clip-path: url('../../svg/square-clip-path.svg#clipPath');
+}
+
+.iconContainer::before,
+.iconContainer::after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.iconContainer::before {
+  background-color: var(--shadow-color);
+  transform: rotate3d(0, 0, 1, -80deg);
+}
+
+.iconContainer::after {
+  background-image: url('../../svg/square-clip-path.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: scale(1.25, 1.25);
+  z-index: 1;
+}
+
 @media screen and (min-width: 480px) {
   .featuredPost {
     grid-template-areas: "body body"
@@ -44,7 +76,7 @@
   }
 
   .iconContainer {
-    position: static;
+    position: relative;
     top: auto;
     bottom: auto;
   }
@@ -59,7 +91,7 @@
     align-items: end;
     justify-items: end;
     max-width: 40rem;
-    height: 22.5rem;
+    height: 20rem;
     margin: 0 auto;
   }
 

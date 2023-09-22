@@ -1,0 +1,28 @@
+<svg
+  width="100%"
+  height="100%"
+  viewBox="0 0 1 1"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <path
+      id="path"
+      d="M0.869062 0.0774445C0.977637 0.170711 1.02785 0.373793 0.984422 0.542275C0.940993 0.710757 0.806632 0.84464 0.650556 0.924368C0.495838 1.0 0.320762 1.03117 0.208116 0.954454C0.0954702 0.877735 0.0452546 0.700227 0.018111 0.527232C-0.00903258 0.354237 -0.0131041 0.187259 0.0588264 0.103018C0.1294 0.0187766 0.277332 0.015768 0.434765 0.00674215C0.593555 -0.00228368 0.760488 -0.0173267 0.869062 0.0774445Z"
+    />
+    <g id="outline">
+      <use href="#path" fill="none" stroke="#f5f0f5" stroke-width="0.02" />
+    </g>
+  </defs>
+  <clipPath id="clipPath" clipPathUnits="objectBoundingBox">
+    <use href="#path" fill="white" />
+  </clipPath>
+  <g
+    transform="scale(0.8)"
+    transform-origin="0.5 0.5"
+  >
+    <use href="#path" fill="none" stroke="#f5f0f5" stroke-width="0.04" />
+    <use href="#outline" x="-0.06" y="-0.02" transform="rotate(-5)" transform-origin="0.5 0.5" /> />
+    <use href="#outline" x="-0.02" y="-0.06" transform="rotate(10)" transform-origin="0.5 0.5" /> />
+    <use href="#outline" x="0.06" y="0.04" transform="rotate(5)" transform-origin="0.5 0.5" />
+  </g>
+</svg>
