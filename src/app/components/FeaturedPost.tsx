@@ -11,7 +11,7 @@ const WORDMARK_WORDS: string[] = [
 
 export interface FeaturedPostProps extends PropsWithChildren {
   title: string | string[],
-  description?: React.ReactElement
+  description?: React.ReactNode
   iconSrc: string
 }
 
@@ -26,15 +26,18 @@ export default function FeaturedPost({
       <SlateBlock
         className={styles.iconContainer}
       >
-        <img
-          className={styles.icon}
-          src={iconSrc}
-          role='presentational'
-          alt=''
-        />
+        <div className={styles.iconWrapper}>
+          <img
+            className={styles.icon}
+            src={iconSrc}
+            role='presentational'
+            alt=''
+          />
+        </div>
       </SlateBlock>
       <SlateBlock
         className={styles.header}
+        padded
       >
         <h3>
           {

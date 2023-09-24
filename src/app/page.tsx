@@ -8,6 +8,9 @@ import vertexShadersIcon from '../content/posts/retroshaderpack/N64ShadersCoverI
 import vertexShadersVideo from '../content/posts/retroshaderpack/moth.mp4'
 import FeaturedPost from './components/FeaturedPost'
 import Heading from './components/Heading'
+import ContainerWithImageBackground from './components/ContainerWithImageBackground'
+import N64ShadersBg from '../content/posts/retroshaderpack/N64ShadersBg.jpg'
+import TV from './components/TV'
 
 export default function Home() {
   return (
@@ -29,13 +32,27 @@ export default function Home() {
                 'Shader Pack'
               ]
             }
+            description={
+              <>
+                <p>7 shaders for true N64/PS1/90s style characters, environments, and effects</p>
+                <p><em>To be published soon</em></p>
+              </>
+            }
             iconSrc={vertexShadersIcon.src}
           >
-            <video
-              src={vertexShadersVideo}
-              autoPlay
-              loop
-            ></video>
+            <ContainerWithImageBackground
+              imageBg={N64ShadersBg}
+              imageAlt='A side-by-side comparison of the same lowpoly model with six different shaders.'
+              align='right'
+            >
+              {/* <TV flipped>
+                <video
+                  src={vertexShadersVideo}
+                  autoPlay
+                  loop
+                ></video>
+              </TV> */}
+            </ContainerWithImageBackground>
           </FeaturedPost>
         </section>
         {/* <SlateBlock align='center'>

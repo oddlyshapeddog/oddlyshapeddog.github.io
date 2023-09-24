@@ -12,6 +12,7 @@ const nextConfigBase = {
     'mdx',
   ],
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'http',

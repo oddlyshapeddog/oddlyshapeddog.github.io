@@ -1,0 +1,67 @@
+.tv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 15em;
+  height: 15em;
+
+  margin-right: -1em;
+}
+
+.tvContent,
+.tvBody {
+  border-radius: 7%;
+}
+
+.tvContent {
+  overflow: hidden;
+}
+
+.tvBody {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+@media screen and (transform-3d),(-webkit-transform-3d) {
+  .tv {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    z-index: 0;
+    perspective: 15em;
+    perspective-origin: 50% 58%;
+  }
+  
+  .tvBody,
+  .tvContent {
+    border-radius: 0;
+  }
+  
+  .tvBody {
+    background-image: url('../components/tv@1x.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
+  
+  .tvContent {
+    padding: 1em 1em 3em 3em;
+    transform: rotate3d(0, 1, 0, 22.5deg);
+    z-index: 0;
+  }
+
+  .tv[data-flipped=true] .tvContent {
+    padding: 1em 3em 3em 1em;
+    transform: rotate3d(0, 1, 0, -22.5deg);
+  }
+
+  .tv[data-flipped=true] .tvBody {
+    transform: scaleX(-1);
+    transform-origin: center center;
+  }
+  
+}

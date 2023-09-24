@@ -1,7 +1,7 @@
 .chaoticText {
   --chaotic-font-weight-medium: 600;
   --chaotic-font-weight-thick: 700;
-  --chaotic-font-size-variation: 1.2;
+  --chaotic-font-size-variation: 1.15;
 
   font-weight: var(--chaotic-font-weight-thick);
   
@@ -22,12 +22,22 @@
   transform: translateY(0);
 }
 
-.chaoticText > span > span:nth-child(3n+1) {
+.chaoticText > span:nth-child(2n) > span:nth-child(3n) {
   font-weight: var(--chaotic-font-weight-medium);
   font-weight: 600;
   font-size: calc(1em * var(--chaotic-font-size-variation));
 }
 
-.chaoticText > span > span:nth-child(2n+1) {
+.chaoticText > span:nth-child(2n) > span:nth-child(2n) {
+  transform: translateY(-0.033em);
+}
+
+.chaoticText > span:nth-child(2n+1) > span:nth-child(3n+1) {
+  font-weight: var(--chaotic-font-weight-medium);
+  font-weight: 600;
+  font-size: calc(1em * var(--chaotic-font-size-variation));
+}
+
+.chaoticText > span:nth-child(2n+1) > span:nth-child(2n+1) {
   transform: translateY(-0.033em);
 }

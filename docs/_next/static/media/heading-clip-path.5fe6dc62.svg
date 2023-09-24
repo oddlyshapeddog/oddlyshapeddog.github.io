@@ -4,7 +4,7 @@
   viewBox="0 0 1 1"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <clipPath id="lozangulus" clipPathUnits="objectBoundingBox">
+  <clipPath id="clipPath" clipPathUnits="objectBoundingBox">
     <path
       d="M 0.017 0.248 C 0.008 0.120, 0.053 0.006, 0.109 0.012 L 0.927 0.101 C 0.966 0.105, 0.995 0.187, 0.990 0.276 L 0.955 0.837 C 0.952 0.887, 0.934 0.924, 0.912 0.925 L 0.124 0.971 C 0.090 0.973, 0.061 0.917, 0.056 0.841 L 0.017 0.248 Z"
       fill="#00CCFF"

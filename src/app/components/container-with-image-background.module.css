@@ -1,0 +1,45 @@
+.containerWithImageBackground {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+}
+
+img.bg {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.overlay {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay[data-align=left] {
+  justify-content: flex-start;
+}
+
+.overlay[data-align=center] {
+  justify-content: center;
+}
+
+.overlay[data-align=right] {
+  justify-content: flex-end;
+}
+
+.overlay img,
+.overlay video {
+  display: block;
+  /* max-width: calc(100vmin - var(--content-spacing-h) * 2);
+  max-height: calc(100vmin - var(--content-spacing-v) * 2); */
+  max-width: 100%;
+  max-height: 100%;
+}

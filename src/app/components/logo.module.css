@@ -32,7 +32,7 @@
   margin-left: 0.25em;
 }
 
-.logo {
+.logoContainer .logo {
   width: 5em;
   transform: rotate(2deg);
 }
